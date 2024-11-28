@@ -1,0 +1,508 @@
+1:  Check if a number is even or odd. 
+Code: 
+import 'dart:io'; 
+void main(){ 
+stdout.write("Hi,Enter a no :"); 
+var number=int.parse(stdin.readLineSync()!); 
+if(number%2==0){ 
+print("chose number is even");} 
+else{ 
+print("Chosed No is odd"); 
+}} 
+
+
+
+2: Convert all characters of a string to uppercase 
+or lowercase. 
+Code: 
+import 'dart:io'; 
+void main(){ 
+askecaptosmall(); 
+askesmalltocap(); 
+} 
+void askecaptosmall(){ 
+stdout.write("Hi,Enter a String:"); 
+var str=stdin.readLineSync()!; 
+String lower=''; 
+for(int i=0;i<str.length;i++){ 
+String char=str[i]; 
+lower+=String.fromCharCode(char.codeUnitAt(0
+ )+32); 
+} 
+print(lower); 
+} 
+void askesmalltocap(){ 
+stdout.write("Hi,Enter a String:"); 
+var str=stdin.readLineSync()!; 
+String upper=''; 
+for(int i=0;i<str.length;i++){ 
+String char=str[i]; 
+upper+=String.fromCharCode(char.codeUnitAt(0
+ )-32); 
+} 
+print(upper); 
+} 
+
+
+
+3: Convert a string to DateTime and DateTime to 
+ISO8601 string 
+Code: 
+void main(){ 
+DateTime myDatetime=DateTime.parse("2024
+07-10 12:04:35"); 
+print(myDatetime.toIso8601String()); 
+} 
+
+
+
+4:  Replace all lowercase vowels in a string 
+with *. 
+Code: 
+import 'dart:io'; 
+void main(){ 
+  stdout.writeln("Enter a String :"); 
+  var str=stdin.readLineSync()!; 
+  String any=''; 
+  for(int i=0;i<str.length;i++){ 
+    String char=str[i]; 
+    if(char.codeUnitAt(0)>90){ 
+      if(char=='a'||char=='e'||char=='i'||char=='o'||
+ char=='u'){ 
+        any+='*';} 
+      else{ 
+        any+=char; 
+      } 
+  } 
+  else{ 
+    any+=char; 
+  } 
+  } 
+  print(any);} 
+
+
+
+
+5: Pad a string on the left or right. 
+Code: 
+import 'dart:io'; 
+void main(){ 
+stdout.writeln("Enter a String :"); 
+dynamic str=stdin.readLineSync()!; 
+stdout.writeln("Enter a String for padding :"); 
+dynamic str1=stdin.readLineSync()!; 
+stdout.writeln("Enter at which side you want to 
+padd a string left/right :"); 
+dynamic str2=stdin.readLineSync()!; 
+if(str2=='left'){ 
+print(str1+str); 
+} 
+else if(str2=='right') 
+{ print(str+str1); 
+} 
+else{ 
+print("You Entered Wrong Choice"); 
+}}  
+
+
+
+6: ) Replace a part of a string (using built in string 
+class). 
+Code: 
+void main(){ 
+f
+ inal givstring="HelloWorld"; 
+f
+ inal 
+newstring=givstring.replaceRange(6,10,"SDJFC"); 
+print(newstring); 
+}
+
+
+
+
+
+Q1: Demonstrate types of strings with examples :
+void main() {   
+String str1 = 'this is an example of a single-line string';   
+String str2 = "this is an example of a double-quotes multiline line string";   
+String str3 = """this is a multiline line   
+string using the triple-quotes""";
+print(str1);
+print(str2);
+print(str3);
+}
+
+
+
+
+Q2: Remove extra white spaces at the end of the string or at the start of the string:
+void main(){
+  String message="    hello    ";
+  print("****"+ message.trimRight() +"****");
+  print("****"+ message.trimLeft() +"****");
+  print("****"+ message.trim() +"****");
+}
+
+
+
+
+Q3: Get the ASCII value of a character in dart:
+void main(){
+  print("Enter a String :");
+  String x=stdin.readLineSync()!;
+  print(x.codeUnits);
+} 
+
+
+
+
+
+Q4: Find the sum of all dart list elements:
+void main(){
+  List<int> list1=[];
+  print("Enter how many you want to add into List");
+  var list2=int.parse(stdin.readLineSync()!);
+  for(int i=0;i<list2;i++){
+    print('Enter a element for position $i');
+var x=int.parse(stdin.readLineSync()!);
+list1.add(x);}
+print("Sum of elements of list1 is :${list1.reduce((i,j)=>i+j)}");
+}
+
+
+
+
+Q5: Find the largest, smallest number in dart list:
+void main(){
+  List<int> list1=[];
+  print("Enter how many you want to add into List");
+  var list2=int.parse(stdin.readLineSync()!);
+  for(int i=0;i<list2;i++){
+    print('Enter a element for position $i');
+var x=int.parse(stdin.readLineSync()!);
+list1.add(x);}
+var lar=1;
+var small=1;
+for(var a in list1){
+  if(a>lar){
+    lar=a;
+  }
+  if(a<small){
+    small=a;
+  }
+}
+print("Largest element in list1 is $lar");
+print("Smallest element in list1 is $small");
+}
+
+
+
+
+
+Q6: Find the factorial of a number recursively:
+void main(){
+  print("Enter a no");
+  var a=int.parse(stdin.readLineSync()!);
+  var fact=1;
+  for(int b=1;b<=a;b++){
+    fact*=b;
+  }
+print("Factorial of no $a is $fact");
+}
+
+
+
+
+
+Q7: Replace characters of strings using regular expressions:
+void main(){
+  var str="My34 pass45word is 1456";
+  print(str.replaceAll(RegExp(r'[0-9]'),'*'));
+}
+
+
+
+
+Q8: Remove the last character and print out the result string:
+void main(){
+  print("Enter a String");
+  String str=stdin.readLineSync()!;
+  if(str!=Null){
+    print(str.substring(0,str.length-1));
+
+  }
+
+
+
+
+
+
+Q1: Set the age of the student using instance method  : 
+class Student{ 
+f
+ inal String name; 
+var age; 
+Student(this.name); 
+set setage(int age)=>this.age=age; 
+int get getage=>this.age; 
+} 
+void main(){ 
+var obj=new Student("Divanshu"); 
+obj.setage=19; 
+print("Student name is ${obj.name} and age is ${obj.age} " ); 
+}
+
+
+
+Q2: Capitalize the first character of a string: 
+void main(){ 
+print("Enter a String"); 
+String str=stdin.readLineSync()!; 
+if(str!=Null){ 
+var a=str.substring(0,1).toUpperCase(); 
+a+=str.substring(1,str.length); 
+print(a); 
+} 
+
+
+
+
+Q3: Concatenate string with an integer : 
+void main(){ 
+print("Enter a String"); 
+String str=stdin.readLineSync()!; 
+var i=stdin.readLineSync()!; 
+if(str!=Null){ 
+print(str+i); 
+}} 
+
+
+
+
+Q4: Check for any or every element in a list to satisfy a given condition: 
+Check if a list contains a specific element or not : 
+void main(){ 
+List<int> a=[12,23,45,67,87]; 
+var b; 
+print("Enter a element you want to check"); 
+var c=int.parse(stdin.readLineSync()!); 
+for(b in a){ 
+if (b==c){ 
+print("$c is present in list"); 
+} 
+} 
+} 
+Check if a list is empty or not: 
+void main() { 
+List<int> myList = [1, 2, 3]; 
+if (myList.isEmpty) { 
+print("The list is empty."); 
+  } else { 
+    print("The list is not empty."); 
+  } 
+ 
+  // Alternatively, using isNotEmpty 
+  if (myList.isNotEmpty) { 
+    print("The list is not empty."); 
+  } else { 
+    print("The list is empty."); 
+  } 
+} 
+
+
+
+
+
+Q5: Check if a year is leap year or not: 
+import 'dart:io'; 
+//Question 1: 
+void main(){ 
+  print("Enter a year you want to chech"); 
+  var a=int.parse(stdin.readLineSync()!); 
+  if(a%4==0 && a%100!=0){ 
+    print("Given year is leap year"); 
+  } 
+  else{ 
+    print("Given year is not a leap year"); 
+  } 
+} 
+
+
+
+
+
+Q6: Find the remainder using remainder() method: 
+void main(){ 
+print("Enter a number"); 
+var a=int.parse(stdin.readLineSync()!); 
+print("Enter a number"); 
+var b=int.parse(stdin.readLineSync()!); 
+var rem=a.remainder(b); 
+print("Remainder is $rem"); 
+}
+
+
+
+
+
+Q1: Menu driven program to 
+1. convert a string to double 
+2. find the length of a string in Dart 
+3. convert hexadecimal to integer. 
+void main(){ 
+  print("Enter 1 for convert string to double"); 
+  print("Enter 2 for finding length of Strinhg"); 
+  print("Enter 3 for converting hexadecimal no to integer"); 
+  print("Enter your choice"); 
+  int num=int.parse(stdin.readLineSync()!); 
+  switch(num){ 
+    case 1: 
+    print("Enter a String"); 
+    String s=stdin.readLineSync()!; 
+    print(double.parse(s)); 
+    break; 
+    case 2: 
+    print("Enter a String"); 
+    String s1=stdin.readLineSync()!; 
+    print("Length of the String ${s1.length}"); 
+    break; 
+    case 3: 
+    print("Enter a hexadecimal number"); 
+    String s2=stdin.readLineSync()!; 
+    print(int.parse(s2,radix:16)); 
+    }} 
+
+
+
+
+Q2: Reverse a list: 
+void main(){ 
+  List List1=[1,'hello',34,'bye',13]; 
+  print(List1.reversed);} 
+
+
+
+
+Q3: Convert degree to radian and vice versa: 
+void main(){ 
+  print("Enter what you wnat to enter degree or radian tupe 1 for degree and 2 
+for radian:"); 
+  int num=int.parse(stdin.readLineSync()!); 
+  if(num==2){ 
+  print("Enter a radian"); 
+  int rad=int.parse(stdin.readLineSync()!); 
+  print("Value of degree is ${(rad * 180)/3.14}"); 
+  } 
+  else{ 
+    print("Enter a degree"); 
+    int deg=int.parse(stdin.readLineSync()!); 
+    print("Value of radian is ${(deg * 3.14)/180}"); 
+  }} 
+
+
+
+
+
+Q4: Menu driven Dart program: 
+to change single or multiple list item. 
+to insert items to a list in dart. 
+to remove items from a dart list. 
+void main(){ 
+  var a=0; 
+  do{ 
+  print("Enter a your choice from the following :"); 
+  print("Enter 1 for change list element."); 
+  print("Enter 2 for add item to list."); 
+  print("Enter 3 for remove item from  list."); 
+  a=int.parse(stdin.readLineSync()!); 
+  List List1=[1,'hello',34,'bye',13]; 
+  switch(a){ 
+    case 1: 
+      print("Enter a postion at which you want change list item"); 
+      var b=int.parse(stdin.readLineSync()!); 
+      print("Enter a item"); 
+      var c=int.parse(stdin.readLineSync()!); 
+      List1[b]=c; 
+      print(List1); 
+      break; 
+    case 2: 
+      print("Enter a postion at which you want add list item"); 
+      var b=int.parse(stdin.readLineSync()!); 
+      print("Enter a item"); 
+      var c=int.parse(stdin.readLineSync()!); 
+      List1[b]=c; 
+      print(List1); 
+      break; 
+    case 3: 
+      print("Enter a postion at which you want add list item"); 
+      var b=int.parse(stdin.readLineSync()!); 
+      List1.removeAt(b); 
+      print(List1); 
+      break; 
+    default: 
+    print("Invalid Choice"); 
+  } 
+  }while(a<4); 
+  } 
+
+
+
+
+Q5Swap two user given numbers: 
+void main() { 
+  var a = 10; 
+  var b = 20; 
+  var c; 
+  // 1 
+  c = a; 
+  a = b; 
+  b = c; 
+  print("Updated number is: $a"); 
+  print("Updated number is: $b"); 
+ 
+  // 2 
+  a = a + b; 
+  a = a - b; 
+  b = a - b; 
+  print("Updated number is: $a"); 
+  print("Updated number is: $b"); 
+} 
+
+
+
+
+Q6 Check if a string contains a number in Dart: 
+void main() { 
+  var str = "Hello1"; 
+  bool res = str.contains(new RegExp(r'[0-9]')); 
+  print(res); 
+} 
+
+
+
+
+
+Q7 Get the current date-time in Dart: 
+void main() { 
+  DateTime currentDateTime = DateTime.now(); 
+  print("Current Date and Time: $currentDateTime"); 
+} 
+
+
+
+
+
+Q8: Find the absolute value of a number, round a number to its nearest value, 
+find the hash value of a string: 
+void main(){ 
+    print("Enter a number"); 
+    var a=int.parse(stdin.readLineSync()!); 
+    print("Enter a float number"); 
+    var b=double.parse(stdin.readLineSync()!); 
+    print("Enter a String"); 
+    String s=stdin.readLineSync()!; 
+    print(a.abs()); 
+    print(b.round()); 
+    print(s.hashCode); 
+    } 
